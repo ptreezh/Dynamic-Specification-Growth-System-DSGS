@@ -1,0 +1,28 @@
+{
+  "id": "ARCH-002",
+  "name": "Layer Separation",
+  "category": "ARCHITECTURE",
+  "description": "Ensure proper separation of concerns between application layers",
+  "rule": "Application layers (presentation, business logic, data access) should be clearly separated with well-defined interfaces",
+  "applicableTasks": ["ALL"],
+  "severity": "WARNING",
+  "parameters": {
+    "layers": [
+      "presentation",
+      "business-logic",
+      "data-access",
+      "integration"
+    ],
+    "allowedInterLayerCommunication": [
+      "presentation -> business-logic",
+      "business-logic -> data-access",
+      "business-logic -> integration"
+    ],
+    "forbiddenInterLayerCommunication": [
+      "presentation -> data-access",
+      "presentation -> integration",
+      "data-access -> business-logic",
+      "integration -> business-logic"
+    ]
+  }
+}

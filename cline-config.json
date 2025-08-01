@@ -1,0 +1,21 @@
+{
+  "mcpServers": [
+    {
+      "name": "dynamic-specs-growth-http",
+      "command": "node",
+      "args": [
+        "dist/integration/mcp/McpAdapter.js"
+      ],
+      "port": 8080,
+      "host": "localhost"
+    },
+    {
+      "name": "dynamic-specs-growth-stdio",
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "dist/integration/mcp/McpStdioServer.js"
+      ]
+    }
+  ]
+}

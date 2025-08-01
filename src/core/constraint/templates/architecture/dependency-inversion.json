@@ -1,0 +1,21 @@
+{
+  "id": "ARCH-001",
+  "name": "Dependency Inversion",
+  "category": "ARCHITECTURE",
+  "description": "Ensure proper dependency inversion principle is followed",
+  "rule": "High-level modules should not depend on low-level modules. Both should depend on abstractions.",
+  "applicableTasks": ["ALL"],
+  "severity": "WARNING",
+  "parameters": {
+    "allowedDependencyTypes": [
+      "interface",
+      "abstract-class",
+      "dependency-injection"
+    ],
+    "forbiddenDependencyTypes": [
+      "concrete-class",
+      "static-method",
+      "global-variable"
+    ]
+  }
+}

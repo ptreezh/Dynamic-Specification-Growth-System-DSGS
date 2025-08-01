@@ -1,0 +1,85 @@
+{
+  "stages": [
+    {
+      "id": "MVP",
+      "name": "Minimum Viable Product",
+      "description": "Initial version with core specification and constraint generation",
+      "version": "1.0",
+      "features": [
+        "SpecificationManager",
+        "ConstraintGenerator",
+        "TCC generation"
+      ],
+      "constraints": [
+        "BSL validation",
+        "Template-based constraints"
+      ],
+      "entryRequirements": {
+        "testCoverage": 0,
+        "performance": {
+          "constraintGenerationTime": 1000,
+          "tccGenerationTime": 500
+        },
+        "stability": {
+          "errorRate": 0.1,
+          "uptime": 0.9
+        }
+      }
+    },
+    {
+      "id": "STABLE",
+      "name": "Stable Release",
+      "description": "Production-ready version with enhanced reliability and performance",
+      "version": "2.0",
+      "features": [
+        "Advanced constraint validation",
+        "Real-time feedback",
+        "Improved error handling"
+      ],
+      "constraints": [
+        "90%+ test coverage",
+        "Performance monitoring",
+        "Graceful degradation"
+      ],
+      "migrationPath": "ADVANCED",
+      "entryRequirements": {
+        "testCoverage": 90,
+        "performance": {
+          "constraintGenerationTime": 100,
+          "tccGenerationTime": 50
+        },
+        "stability": {
+          "errorRate": 0.01,
+          "uptime": 0.99
+        }
+      }
+    },
+    {
+      "id": "ADVANCED",
+      "name": "Advanced Capabilities",
+      "description": "Version with AI-driven optimization and self-evolution",
+      "version": "3.0",
+      "features": [
+        "AI-powered constraint generation",
+        "Self-referential governance",
+        "Automated evolution"
+      ],
+      "constraints": [
+        "AI model validation",
+        "Self-constraint verification",
+        "Automated testing"
+      ],
+      "entryRequirements": {
+        "testCoverage": 95,
+        "performance": {
+          "constraintGenerationTime": 50,
+          "tccGenerationTime": 25
+        },
+        "stability": {
+          "errorRate": 0.001,
+          "uptime": 0.999
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "SEC-002",
+  "name": "Authentication",
+  "category": "SECURITY",
+  "description": "Ensure proper authentication mechanisms are in place for sensitive operations",
+  "rule": "All sensitive operations must require user authentication with multi-factor authentication for privileged actions",
+  "applicableTasks": ["AUTHENTICATION", "FINANCIAL", "ADMIN"],
+  "severity": "ERROR",
+  "parameters": {
+    "requiredFactors": 2,
+    "sessionTimeoutMinutes": 30,
+    "passwordPolicy": {
+      "minLength": 8,
+      "requireUppercase": true,
+      "requireLowercase": true,
+      "requireNumbers": true,
+      "requireSpecialChars": true
+    }
+  }
+}

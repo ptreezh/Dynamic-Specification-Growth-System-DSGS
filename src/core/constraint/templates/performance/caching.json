@@ -1,0 +1,22 @@
+{
+  "id": "PERF-001",
+  "name": "Caching Strategy",
+  "category": "PERFORMANCE",
+  "description": "Implement appropriate caching mechanisms to improve response times",
+  "rule": "Frequently accessed data should be cached with appropriate TTL and cache invalidation strategies",
+  "applicableTasks": ["API", "DATABASE", "WEB"],
+  "severity": "WARNING",
+  "parameters": {
+    "defaultTTLSeconds": 300,
+    "maxTTLSeconds": 3600,
+    "cacheTypes": [
+      "in-memory",
+      "distributed",
+      "CDN"
+    ],
+    "invalidationStrategies": [
+      "time-based",
+      "event-driven"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "SEC-003",
+  "name": "Audit Logging",
+  "category": "SECURITY",
+  "description": "Ensure all critical operations are properly logged for audit purposes",
+  "rule": "All critical operations must be logged with user ID, timestamp, operation type, and outcome",
+  "applicableTasks": ["FINANCIAL", "ADMIN", "AUDIT"],
+  "severity": "WARNING",
+  "parameters": {
+    "retentionDays": 365,
+    "logLevel": "INFO",
+    "requiredFields": [
+      "userId",
+      "timestamp",
+      "operation",
+      "result",
+      "ipAddress"
+    ]
+  }
+}

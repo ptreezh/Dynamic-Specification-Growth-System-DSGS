@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Basic Survival Laws (BSL)",
+  "description": "Core rules that define the fundamental constraints for system operation",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Version of the BSL specification",
+      "default": "1.0"
+    },
+    "bsl": {
+      "type": "array",
+      "description": "List of basic survival laws",
+      "items": {
+        "type": "string",
+        "enum": [
+          "NO_DEADLOCK",
+          "MINIMAL_PRIVILEGE",
+          "NO_RESOURCE_LEAK",
+          "INPUT_VALIDATION",
+          "ERROR_HANDLING"
+        ]
+      },
+      "minItems": 5,
+      "uniqueItems": true
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "created": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the specification was created"
+        },
+        "modified": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the specification was last modified"
+        },
+        "author": {
+          "type": "string",
+          "description": "Author of the specification"
+        }
+      },
+      "required": ["created", "modified", "author"]
+    }
+  },
+  "required": ["version", "bsl", "metadata"]
+}

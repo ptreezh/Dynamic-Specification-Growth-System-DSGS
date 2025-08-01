@@ -1,0 +1,18 @@
+{
+  "id": "SEC-001",
+  "name": "Input Validation",
+  "category": "SECURITY",
+  "description": "Ensure all user inputs are properly validated to prevent injection attacks",
+  "rule": "All user inputs must be validated against a whitelist of allowed characters and patterns",
+  "applicableTasks": ["ALL"],
+  "severity": "ERROR",
+  "parameters": {
+    "maxInputLength": 1000,
+    "allowedPatterns": [
+      "alphanumeric",
+      "email",
+      "url",
+      "phone"
+    ]
+  }
+}

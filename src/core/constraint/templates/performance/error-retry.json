@@ -1,0 +1,15 @@
+{
+  "id": "PERF-002",
+  "name": "Error Retry Mechanism",
+  "category": "PERFORMANCE",
+  "description": "Implement proper retry mechanisms for transient failures",
+  "rule": "Transient failures should be retried with exponential backoff and jitter",
+  "applicableTasks": ["API", "NETWORK", "DATABASE"],
+  "severity": "WARNING",
+  "parameters": {
+    "maxRetries": 3,
+    "baseDelayMs": 100,
+    "maxDelayMs": 1000,
+    "jitterFactor": 0.1
+  }
+}
